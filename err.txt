@@ -1,0 +1,54 @@
+/Users/manojkesani/Desktop/Sandbox/mockup/code2.py:8: ResourceWarning: unclosed file <_io.TextIOWrapper name='code1.py' mode='r' encoding='UTF-8'>
+  exec(open("code1.py").read())
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Output file saved to output.csv
+./Users/manojkesani/Desktop/Sandbox/mockup/code2.py:8: ResourceWarning: unclosed file <_io.TextIOWrapper name='code1.py' mode='r' encoding='UTF-8'>
+  exec(open("code1.py").read())
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Output file saved to output.csv
+E/Users/manojkesani/Desktop/Sandbox/mockup/code2.py:8: ResourceWarning: unclosed file <_io.TextIOWrapper name='code1.py' mode='r' encoding='UTF-8'>
+  exec(open("code1.py").read())
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Output file saved to output.csv
+./Users/manojkesani/Desktop/Sandbox/mockup/code2.py:8: ResourceWarning: unclosed file <_io.TextIOWrapper name='code1.py' mode='r' encoding='UTF-8'>
+  exec(open("code1.py").read())
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Output file saved to output.csv
+F
+======================================================================
+ERROR: test_output_file_data (__main__.TestCode1.test_output_file_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/manojkesani/miniconda3/envs/chat/lib/python3.12/site-packages/pandas/core/indexes/range.py", line 413, in get_loc
+    return self._range.index(new_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: 1 is not in range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/manojkesani/Desktop/Sandbox/mockup/code2.py", line 27, in test_output_file_data
+    self.assertEqual(output_df.loc[index, 'Name'], name)
+                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/manojkesani/miniconda3/envs/chat/lib/python3.12/site-packages/pandas/core/indexing.py", line 1183, in __getitem__
+    return self.obj._get_value(*key, takeable=self._takeable)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manojkesani/miniconda3/envs/chat/lib/python3.12/site-packages/pandas/core/frame.py", line 4221, in _get_value
+    row = self.index.get_loc(index)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manojkesani/miniconda3/envs/chat/lib/python3.12/site-packages/pandas/core/indexes/range.py", line 415, in get_loc
+    raise KeyError(key) from err
+KeyError: 1
+
+======================================================================
+FAIL: test_output_file_rows (__main__.TestCode1.test_output_file_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/manojkesani/Desktop/Sandbox/mockup/code2.py", line 20, in test_output_file_rows
+    self.assertEqual(len(input_df), len(output_df))
+AssertionError: 151671 != 1
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.387s
+
+FAILED (failures=1, errors=1)
